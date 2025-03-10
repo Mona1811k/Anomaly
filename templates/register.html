@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SmartWatch</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+  <!-- Custom styles for registration form -->
+  <link href="/static/css/form-style.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="/statis/images/logo.png" alt="">
+            <span>
+              SmartWatch
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('about')}}">About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('register')}}">Register </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('login')}}">Login </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- news section -->
+  <section class="news_section layout_padding">
+    <div class="container">
+      <div class="d-flex flex-column align-items-center">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="box">
+              <div class="img-box">
+                <img src="/statis/images/n-2.jpg" alt="">
+              </div>
+              <div class="form-container" style="margin-top: -130px;">
+                <form action="{{url_for('register')}}" method="post" class="login-form">
+                  <input type="text" name="username" placeholder="Username" required/>
+                  <input type="email" name="useremail" placeholder="Email" required/>
+                  <input type="number" name="age" placeholder="Age" required/>
+                  <div class="form-group">
+                    <label>
+                      <input type="radio" name="gender" value="male" required>
+                      Male
+                    </label>
+                    <label>
+                      <input type="radio" name="gender" value="female" required>
+                      Female
+                    </label>
+                  </div>
+                  <input type="password" name="password" placeholder="Password" required/>
+                  <input type="password" name="c_password" placeholder="Confirm Password" required/>
+                  <button type="submit">Register</button>
+                  <p class="message">Already registered? <a href="{{url_for('login')}}">Already have an account</a></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end news section -->
+
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+</body>
+</html>
